@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexi - Smart Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+    <div class="app-container">
+        <aside id="sidebar" class="panel">
+            <div class="panel-header">
+                <h3>Starred Words</h3>
+                <button id="close-sidebar" class="nav-link">Close</button>
+            </div>
+            <div class="panel-body">
+                <ul id="stars-list"></ul>
+            </div>
+        </aside>
+
+        <div id="settings-panel" class="panel">
+            <div class="panel-header">
+                <h3>Settings</h3>
+                <button id="close-settings" class="nav-link">Close</button>
+            </div>
+            <div class="panel-body">
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <strong>Dark Mode</strong>
+                        <p>Switch between light and dark themes</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row">
+                    <div class="setting-info">
+                        <strong>Show Phonetics</strong>
+                        <p>Display word pronunciation guides</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="phonetic-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="divider"></div>
+                <button id="reset-all" class="danger-btn">Reset All Data</button>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <nav>
+                <div class="logo">Lexi<span>.</span></div>
+                <div class="nav-btns">
+                    <button id="open-settings" class="nav-link">Settings</button>
+                    <button id="open-sidebar" class="nav-link">Starred</button>
+                </div>
+            </nav>
+
+            <div class="search-area">
+                <div class="input-wrapper">
+                    <input type="text" id="word-input" placeholder="Search a word..." autocomplete="off">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div id="autocomplete-list" class="autocomplete-items"></div>
+            </div>
+
+            <div id="result-container">
+                <div class="empty-state">
+                    <p>Enter a word to explore definitions and synonyms.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
